@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.List;
 
 @Entity(name = "responses")
 public class Response {
@@ -38,9 +39,14 @@ public class Response {
     @JsonIgnore
     private Question question;
 
+    @OneToMany(mappedBy = "response", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private List<Vote> votes;
+
     public Response(){}
 
-    public Response(int id, String text, Timestamp createdAt, String createdBy, int upVotes, int downVotes, Question question) {
+    public Response(int id, String text, Timestamp createdAt, String createdBy, int upVotes, int downVotes,
+                    Question question, List<Vote> votes) {
         this.id = id;
         this.text = text;
         this.createdAt = createdAt;
@@ -48,6 +54,7 @@ public class Response {
         this.upVotes = upVotes;
         this.downVotes = downVotes;
         this.question = question;
+        this.votes = votes;
     }
 
     public int getId() {
@@ -104,5 +111,13 @@ public class Response {
 
     public void setQuestion(Question question) {
         this.question = question;
+    }
+
+    public List<Vote> getVotes() {
+        return votes;
+    }
+
+    public void setVotes(List<Vote> votes) {
+        this.votes = votes;
     }
 }
