@@ -1,6 +1,7 @@
 package com.example.Project;
 
 import com.example.Project.domain.Question;
+import com.example.Project.domain.QuestionVote;
 import com.example.Project.domain.Response;
 import com.example.Project.domain.Vote;
 import org.slf4j.Logger;
@@ -53,10 +54,22 @@ public class GetTestObjects {
         return response;
     }
 
+    public Response getResponseAccepted(){
+        Response response = new Response();
+        response.setAccepted(true);
+        return response;
+    }
+
     public Vote getVote(){
         Vote vote = new Vote();
         vote.setCreatedBy("First User");
         return vote;
+    }
+
+    public QuestionVote getQuestionVote(){
+        QuestionVote questionVote = new QuestionVote();
+        questionVote.setCreatedBy("Second User");
+        return questionVote;
     }
 
 }

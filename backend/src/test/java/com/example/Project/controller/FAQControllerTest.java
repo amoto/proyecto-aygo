@@ -2,6 +2,7 @@ package com.example.Project.controller;
 
 import com.example.Project.GetTestObjects;
 import com.example.Project.domain.Question;
+import com.example.Project.domain.QuestionVote;
 import com.example.Project.domain.Response;
 import com.example.Project.domain.Vote;
 import com.example.Project.service.FAQService;
@@ -41,6 +42,7 @@ public class FAQControllerTest {
     private Question question;
     private Response response;
     private Vote vote;
+    private QuestionVote questionVote;
     private ObjectMapper mapper;
 
     @Before
@@ -50,6 +52,7 @@ public class FAQControllerTest {
         question = getTestObjects.getQuestion();
         response = getTestObjects.getResponse();
         vote = getTestObjects.getVote();
+        questionVote = getTestObjects.getQuestionVote();
     }
 
     @Test
@@ -202,6 +205,69 @@ public class FAQControllerTest {
         mvc.perform(MockMvcRequestBuilders.put("/faq/voteDown/response/{responseId}/voteCreator/{voteCreator}",
                         response.getId(),vote.getCreatedBy()))
                 .andExpect(status().isOk());
+    }
+
+    @Test
+    public void acceptResponse_ok() throws Exception {
+
+        Mockito.doNothing().when(faqService)
+                .acceptResponse(response.getId(),question.getCreatedBy());
+
+        mvc.perform(MockMvcRequestBuilders
+                .put("/faq/accepted/response/{responseId}/questionCreatedBy/{questionCreatedBy}",
+                        response.getId(),question.getCreatedBy()))
+                .andExpect(status().isOk());
+
+    }
+
+    @Test
+    public void saveVoteUpQuestion_ok() throws Exception {
+
+        when(faqService.saveQuestionVote(any(QuestionVote.class),eq("up"),eq(question.getId())))
+                .thenReturn(questionVote);
+
+        mvc.perform(MockMvcRequestBuilders.post("/faq/voteUp/question/{questionId}",question.getId())
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(mapper.writeValueAsString(questionVote)))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.created_by",is(questionVote.getCreatedBy())).isString());
+    }
+
+    @Test
+    public void saveVoteDownQuestion_ok() throws Exception {
+
+        when(faqService.saveQuestionVote(any(QuestionVote.class),eq("down"),eq(question.getId())))
+                .thenReturn(questionVote);
+
+        mvc.perform(MockMvcRequestBuilders.post("/faq/voteDown/question/{questionId}",question.getId())
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(mapper.writeValueAsString(questionVote)))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.created_by",is(questionVote.getCreatedBy())).isString());
+    }
+
+    @Test
+    public void updateVoteUpQuestion_ok() throws Exception {
+
+        Mockito.doNothing().when(faqService)
+                .updateQuestionVote("up",question.getId(),questionVote.getCreatedBy());
+
+        mvc.perform(MockMvcRequestBuilders.put("/faq/voteUp/question/{questionId}/voteCreator/{voteCreator}",
+                question.getId(),questionVote.getCreatedBy()))
+                .andExpect(status().isOk());
+
+    }
+
+    @Test
+    public void updateVoteDownQuestion_ok() throws Exception {
+
+        Mockito.doNothing().when(faqService)
+                .updateQuestionVote("down",question.getId(),questionVote.getCreatedBy());
+
+        mvc.perform(MockMvcRequestBuilders.put("/faq/voteDown/question/{questionId}/voteCreator/{voteCreator}",
+                        question.getId(),questionVote.getCreatedBy()))
+                .andExpect(status().isOk());
+
     }
 
 }

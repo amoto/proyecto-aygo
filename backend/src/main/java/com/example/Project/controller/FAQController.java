@@ -1,6 +1,7 @@
 package com.example.Project.controller;
 
 import com.example.Project.domain.Question;
+import com.example.Project.domain.QuestionVote;
 import com.example.Project.domain.Response;
 import com.example.Project.domain.Vote;
 import com.example.Project.service.FAQService;
@@ -16,77 +17,111 @@ public class FAQController {
 
     private final FAQService faqService;
 
-    public FAQController(FAQService faqService){
+    public FAQController(FAQService faqService) {
         this.faqService = faqService;
     }
 
     @GetMapping("/question/{id}")
-    public ResponseEntity<Question> getQuestion(@PathVariable("id") int id){
-        return new ResponseEntity<>(faqService.findQuestionById(id),HttpStatus.OK);
+    public ResponseEntity<Question> getQuestion(@PathVariable("id") int id) {
+        return new ResponseEntity<>(faqService.findQuestionById(id), HttpStatus.OK);
     }
 
     @GetMapping("/questions")
-    public ResponseEntity<List<Question>> getAllQuestion(){
-        return new ResponseEntity<>(faqService.findAllQuestions(),HttpStatus.OK);
+    public ResponseEntity<List<Question>> getAllQuestion() {
+        return new ResponseEntity<>(faqService.findAllQuestions(), HttpStatus.OK);
     }
 
     @PostMapping("/question")
-    public ResponseEntity<Question> saveQuestion(@RequestBody Question question){
+    public ResponseEntity<Question> saveQuestion(@RequestBody Question question) {
         return new ResponseEntity<>(faqService.saveQuestion(question), HttpStatus.OK);
     }
 
     @GetMapping("/questions/createdBy/{createdBy}")
-    public ResponseEntity<List<Question>> getQuestionsByCreatedBy(@PathVariable("createdBy") String createdBy){
+    public ResponseEntity<List<Question>> getQuestionsByCreatedBy(@PathVariable("createdBy") String createdBy) {
         return new ResponseEntity<>(faqService.findQuestionsByCreatedBy(createdBy),
                 HttpStatus.OK);
     }
 
     @GetMapping("/responses/question/{questionId}")
-    public ResponseEntity<List<Response>> getResponsesByQuestionId(@PathVariable("questionId") int questionId){
+    public ResponseEntity<List<Response>> getResponsesByQuestionId(@PathVariable("questionId") int questionId) {
         return new ResponseEntity<>(faqService.findResponsesByQuestionId(questionId),
                 HttpStatus.OK);
     }
 
     @PostMapping("/response/question/{questionId}")
     public ResponseEntity<Response> saveResponse(@RequestBody Response response,
-                                                 @PathVariable int questionId){
-        return new ResponseEntity<>(faqService.saveResponse(response,questionId),HttpStatus.OK);
+                                                 @PathVariable int questionId) {
+        return new ResponseEntity<>(faqService.saveResponse(response, questionId), HttpStatus.OK);
     }
 
     @GetMapping("/responses/createdBy/{createdBy}")
-    public ResponseEntity<List<Response>> getResponsesByCreatedBy(@PathVariable("createdBy") String createdBy){
+    public ResponseEntity<List<Response>> getResponsesByCreatedBy(@PathVariable("createdBy") String createdBy) {
         return new ResponseEntity<>(faqService.findResponsesByCreatedBy(createdBy),
                 HttpStatus.OK);
     }
 
+    @PostMapping("/voteUp/question/{questionId}")
+    public ResponseEntity<QuestionVote> saveVoteUpQuestion(@RequestBody QuestionVote questionVote,
+                                                           @PathVariable("questionId") int questionId){
+        return new ResponseEntity<>(faqService.saveQuestionVote(questionVote,"up",questionId),
+                HttpStatus.OK);
+    }
+
+    @PostMapping("/voteDown/question/{questionId}")
+    public ResponseEntity<QuestionVote> saveVoteDownQuestion(@RequestBody QuestionVote questionVote,
+                                                           @PathVariable("questionId") int questionId){
+        return new ResponseEntity<>(faqService.saveQuestionVote(questionVote,"down",questionId),
+                HttpStatus.OK);
+    }
+
+    @PutMapping("/voteUp/question/{questionId}/voteCreator/{voteCreator}")
+    public ResponseEntity<Void> updateVoteUpQuestion(@PathVariable("questionId") int questionId,
+                                                     @PathVariable("voteCreator") String voteCreator){
+        faqService.updateQuestionVote("up",questionId,voteCreator);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @PutMapping("/voteDown/question/{questionId}/voteCreator/{voteCreator}")
+    public ResponseEntity<Void> updateVoteDownQuestion(@PathVariable("questionId") int questionId,
+                                                     @PathVariable("voteCreator") String voteCreator){
+        faqService.updateQuestionVote("down",questionId,voteCreator);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
     @PostMapping("/voteUp/response/{responseId}")
     public ResponseEntity<Vote> saveVoteUpResponse(@RequestBody Vote vote,
-                                                 @PathVariable("responseId") int responseId){
-        return new ResponseEntity<>(faqService.saveVoteResponse(vote,"up",responseId),
+                                                   @PathVariable("responseId") int responseId) {
+        return new ResponseEntity<>(faqService.saveVoteResponse(vote, "up", responseId),
                 HttpStatus.OK);
     }
 
     @PostMapping("/voteDown/response/{responseId}")
     public ResponseEntity<Vote> saveVoteDownResponse(@RequestBody Vote vote,
-                                                   @PathVariable("responseId") int responseId){
-        return new ResponseEntity<>(faqService.saveVoteResponse(vote,"down",responseId),
+                                                     @PathVariable("responseId") int responseId) {
+        return new ResponseEntity<>(faqService.saveVoteResponse(vote, "down", responseId),
                 HttpStatus.OK);
     }
 
     @PutMapping("/voteUp/response/{responseId}/voteCreator/{voteCreator}")
     public ResponseEntity<Void> updateVoteUpResponse(@PathVariable("responseId") int responseId,
-                                                     @PathVariable("voteCreator") String voteCreator){
-        faqService.updateVoteResponse("up",responseId,voteCreator);
+                                                     @PathVariable("voteCreator") String voteCreator) {
+        faqService.updateVoteResponse("up", responseId, voteCreator);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @PutMapping("/voteDown/response/{responseId}/voteCreator/{voteCreator}")
     public ResponseEntity<Void> updateVoteDownResponse(@PathVariable("responseId") int responseId,
-                                                     @PathVariable("voteCreator") String voteCreator){
-        faqService.updateVoteResponse("down",responseId,voteCreator);
+                                                       @PathVariable("voteCreator") String voteCreator) {
+        faqService.updateVoteResponse("down", responseId, voteCreator);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    @PutMapping("/accepted/response/{responseId}/questionCreatedBy/{questionCreatedBy}")
+    public ResponseEntity<Void> acceptResponse(@PathVariable("responseId") int responseId,
+                                               @PathVariable("questionCreatedBy") String questionCreatedBy){
+        faqService.acceptResponse(responseId,questionCreatedBy);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 
 
 }
