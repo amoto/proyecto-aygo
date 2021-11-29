@@ -38,6 +38,7 @@ public class GetTestObjects {
     public Response getResponse(){
         Response response = new Response();
         try{
+            response.setId(1);
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.SSS");
             Date parsedDate = dateFormat.parse("2021-11-25 12:00:00.000");
             response.setCreatedAt(new Timestamp(parsedDate.getTime()));
