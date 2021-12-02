@@ -1,9 +1,11 @@
 package com.example.Project.service;
 
 import com.example.Project.domain.Question;
+import com.example.Project.domain.QuestionVote;
 import com.example.Project.domain.Response;
 import com.example.Project.domain.Vote;
 import com.example.Project.repository.QuestionRepository;
+import com.example.Project.repository.QuestionVoteRepository;
 import com.example.Project.repository.ResponseRepository;
 import com.example.Project.repository.VoteRepository;
 import org.springframework.stereotype.Service;
@@ -20,12 +22,16 @@ public class FAQService {
 
     private final VoteRepository voteRepository;
 
+    private final QuestionVoteRepository questionVoteRepository;
+
     public FAQService(QuestionRepository questionRepository,
                       ResponseRepository responseRepository,
-                      VoteRepository voteRepository) {
+                      VoteRepository voteRepository,
+                      QuestionVoteRepository questionVoteRepository) {
         this.questionRepository = questionRepository;
         this.responseRepository = responseRepository;
         this.voteRepository = voteRepository;
+        this.questionVoteRepository = questionVoteRepository;
     }
 
     public Question saveQuestion(Question question) {
@@ -91,6 +97,48 @@ public class FAQService {
         } else if (responseRequest.equals("down")) {
             voteRepository.updateResponseVoteDown(responseId, voteCreator);
             responseRepository.updateResponseVotes(responseId);
+        }
+    }
+
+    public void acceptResponse(int responseId, String questionCreatedBy) {
+        Response response = responseRepository.findResponseById(responseId);
+        Response responseAccepted = responseRepository.findAcceptedResponse(response.getQuestion().getId());
+        if (response.getQuestion().getCreatedBy().equals(questionCreatedBy)) {
+            if (responseAccepted != null) {
+                responseRepository.updateAcceptResponse(responseAccepted.getId(), false);
+            }
+            responseRepository.updateAcceptResponse(responseId, true);
+        }
+
+    }
+
+    public QuestionVote saveQuestionVote(QuestionVote questionVote, String voteRequest, int questionId) {
+        QuestionVote isPresent = questionVoteRepository
+                .findQuestionVoteByQuestionIdAndCreatedBy(questionId, questionVote.getCreatedBy());
+        if (isPresent == null) {
+            Question question = questionRepository.findQuestionById(questionId);
+            questionVote.setQuestion(question);
+            if (voteRequest.equals("up")) {
+                questionVote.setVoteUp(1);
+                questionVote.setVoteDown(0);
+            } else if (voteRequest.equals("down")) {
+                questionVote.setVoteUp(0);
+                questionVote.setVoteDown(1);
+            }
+            QuestionVote voteResult = questionVoteRepository.save(questionVote);
+            questionRepository.updateQuestionVotes(questionId);
+            return voteResult;
+        }
+        return isPresent;
+    }
+
+    public void updateQuestionVote(String voteRequest, int questionId, String voteCreator) {
+        if (voteRequest.equals("up")) {
+            questionVoteRepository.updateQuestionVoteUp(questionId, voteCreator);
+            questionRepository.updateQuestionVotes(questionId);
+        } else if (voteRequest.equals("down")) {
+            questionVoteRepository.updateQuestionVoteDown(questionId, voteCreator);
+            questionRepository.updateQuestionVotes(questionId);
         }
     }
 

@@ -16,6 +16,7 @@ public interface ResponseRepository extends JpaRepository<Response, Long> {
 
     Response findResponseById(int responseId);
 
+    @Query("select r from responses r order by (r.upVotes - r.downVotes) desc ")
     List<Response> findResponsesByQuestionId(int questionId);
 
     List<Response> findResponsesByCreatedBy(String createdBy);
@@ -27,5 +28,13 @@ public interface ResponseRepository extends JpaRepository<Response, Long> {
             "UPDATE responses SET up_votes = sum_votes.sumUp, down_votes = sum_votes.sumDown FROM sum_votes WHERE id = :responseId",
             nativeQuery = true)
     void updateResponseVotes(@Param("responseId") int responseId);
+
+    @Query("select r from responses r join questions q on r.question.id = q.id where r.accepted = true")
+    Response findAcceptedResponse(@Param("questionId") int questionId);
+
+    @Transactional
+    @Modifying
+    @Query("update responses r set r.accepted = :accepted where r.id = :responseId")
+    void updateAcceptResponse(@Param("responseId") int responseId, @Param("accepted") boolean accepted);
 
 }

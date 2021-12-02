@@ -2,9 +2,11 @@ package com.example.Project.service;
 
 import com.example.Project.GetTestObjects;
 import com.example.Project.domain.Question;
+import com.example.Project.domain.QuestionVote;
 import com.example.Project.domain.Response;
 import com.example.Project.domain.Vote;
 import com.example.Project.repository.QuestionRepository;
+import com.example.Project.repository.QuestionVoteRepository;
 import com.example.Project.repository.ResponseRepository;
 import com.example.Project.repository.VoteRepository;
 import org.junit.Assert;
@@ -22,7 +24,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.*;
 
 @RunWith(SpringRunner.class)
@@ -41,11 +42,18 @@ public class FAQServiceTest {
     @MockBean
     private VoteRepository voteRepository;
 
+    @MockBean
+    private QuestionVoteRepository questionVoteRepository;
+
     private GetTestObjects getTestObjects;
 
     private Question question;
 
     private Response response;
+
+    private Response responseAccepted;
+
+    private QuestionVote questionVote;
 
     private Vote vote;
 
@@ -55,6 +63,8 @@ public class FAQServiceTest {
         question = getTestObjects.getQuestion();
         response = getTestObjects.getResponse();
         vote = getTestObjects.getVote();
+        responseAccepted = getTestObjects.getResponseAccepted();
+        questionVote = getTestObjects.getQuestionVote();
     }
 
     @Test
@@ -234,6 +244,105 @@ public class FAQServiceTest {
         verify(responseRepository,times(1))
                 .updateResponseVotes(response.getId());
 
+    }
+
+    @Test
+    public void acceptResponse_ok(){
+        response.setQuestion(question);
+
+        when(responseRepository.findResponseById(response.getId()))
+                .thenReturn(response);
+        when(responseRepository.findAcceptedResponse(question.getId()))
+                .thenReturn(responseAccepted);
+        doNothing().when(responseRepository).updateAcceptResponse(response.getId(),true);
+        doNothing().when(responseRepository).updateAcceptResponse(response.getQuestion().getId(),false);
+        try{
+            faqService.acceptResponse(response.getId(),question.getCreatedBy());
+        }catch (Exception ex){
+            Assert.fail();
+        }
+
+    }
+
+    @Test
+    public void saveQuestionVoteUp_ok(){
+        questionVote.setVoteUp(1);
+        questionVote.setVoteDown(0);
+        questionVote.setQuestion(question);
+
+        when(questionVoteRepository.findQuestionVoteByQuestionIdAndCreatedBy(anyInt(),anyString()))
+                .thenReturn(null);
+        when(questionRepository.findQuestionById(question.getId()))
+                .thenReturn(question);
+        when(questionVoteRepository.save(any(QuestionVote.class)))
+                .thenReturn(questionVote);
+        doNothing().when(questionRepository)
+                .updateQuestionVotes(question.getId());
+        QuestionVote result = faqService.saveQuestionVote(questionVote,"up",question.getId());
+        Assert.assertEquals(result.getQuestion(),question);
+        Assert.assertEquals(result.getVoteUp(),1);
+        Assert.assertEquals(result.getVoteDown(),0);
+
+    }
+
+    @Test
+    public void saveQuestionVoteDown_ok(){
+        questionVote.setVoteUp(0);
+        questionVote.setVoteDown(1);
+        questionVote.setQuestion(question);
+
+        when(questionVoteRepository.findQuestionVoteByQuestionIdAndCreatedBy(anyInt(),anyString()))
+                .thenReturn(null);
+        when(questionRepository.findQuestionById(question.getId()))
+                .thenReturn(question);
+        when(questionVoteRepository.save(any(QuestionVote.class)))
+                .thenReturn(questionVote);
+        doNothing().when(questionRepository)
+                .updateQuestionVotes(question.getId());
+        QuestionVote result = faqService.saveQuestionVote(questionVote,"down",question.getId());
+        Assert.assertEquals(result.getQuestion(),question);
+        Assert.assertEquals(result.getVoteUp(),0);
+        Assert.assertEquals(result.getVoteDown(),1);
+
+    }
+
+    @Test
+    public void saveQuestionVote_existDoNothing(){
+
+        when(questionVoteRepository.findQuestionVoteByQuestionIdAndCreatedBy(question.getId(),questionVote.getCreatedBy()))
+                .thenReturn(questionVote);
+
+        faqService.saveQuestionVote(questionVote,"up",question.getId());
+
+        verify(questionVoteRepository,times(0))
+                .save(any(QuestionVote.class));
+
+    }
+
+    @Test
+    public void updateQuestionVoteUp_ok(){
+
+        doNothing().when(questionVoteRepository)
+                .updateQuestionVoteUp(question.getId(),questionVote.getCreatedBy());
+        doNothing().when(questionRepository)
+                .updateQuestionVotes(question.getId());
+        faqService.updateQuestionVote("up",question.getId(),questionVote.getCreatedBy());
+
+        verify(questionRepository,times(1))
+                .updateQuestionVotes(question.getId());
+    }
+
+    @Test
+    public void updateQuestionVoteDown_ok(){
+
+        doNothing().when(questionVoteRepository)
+                .updateQuestionVoteDown(question.getId(),questionVote.getCreatedBy());
+        doNothing().when(questionRepository)
+                .updateQuestionVotes(question.getId());
+        faqService.updateQuestionVote("down",question.getId(),questionVote.getCreatedBy());
+
+        verify(questionRepository,times(1))
+                .updateQuestionVotes(question.getId());
     }
 
 }

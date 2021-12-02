@@ -32,22 +32,37 @@ public class Question {
     @Column(name = "tags")
     private String tags;
 
+    @Column(name = "votes_up")
+    @JsonProperty("votes_up")
+    private int votesUp;
+
+    @Column(name = "votes_down")
+    @JsonProperty("votes_down")
+    private int votesDown;
+
     @OneToMany(mappedBy = "question", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Response> responses;
+
+    @OneToMany(mappedBy = "question", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private List<QuestionVote> votes;
 
     public Question() {
     }
 
     public Question(int id, String title, String description, Timestamp createdAt, String createdBy, String tags,
-                    List<Response> responses) {
+                    int votesUp, int votesDown, List<Response> responses, List<QuestionVote> votes) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.createdAt = createdAt;
         this.createdBy = createdBy;
         this.tags = tags;
+        this.votesUp = votesUp;
+        this.votesDown = votesDown;
         this.responses = responses;
+        this.votes = votes;
     }
 
     public int getId() {
@@ -98,11 +113,35 @@ public class Question {
         this.tags = tags;
     }
 
+    public int getVotesUp() {
+        return votesUp;
+    }
+
+    public void setVotesUp(int votesUp) {
+        this.votesUp = votesUp;
+    }
+
+    public int getVotesDown() {
+        return votesDown;
+    }
+
+    public void setVotesDown(int votesDown) {
+        this.votesDown = votesDown;
+    }
+
     public List<Response> getResponses() {
         return responses;
     }
 
     public void setResponses(List<Response> responses) {
         this.responses = responses;
+    }
+
+    public List<QuestionVote> getVotes() {
+        return votes;
+    }
+
+    public void setVotes(List<QuestionVote> votes) {
+        this.votes = votes;
     }
 }

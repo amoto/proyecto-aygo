@@ -34,6 +34,9 @@ public class Response {
     @JsonProperty("down_votes")
     private int downVotes;
 
+    @Column(name = "accepted")
+    private boolean accepted;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "question_id")
     @JsonIgnore
@@ -47,13 +50,14 @@ public class Response {
     }
 
     public Response(int id, String text, Timestamp createdAt, String createdBy, int upVotes, int downVotes,
-                    Question question, List<Vote> votes) {
+                    boolean accepted, Question question, List<Vote> votes) {
         this.id = id;
         this.text = text;
         this.createdAt = createdAt;
         this.createdBy = createdBy;
         this.upVotes = upVotes;
         this.downVotes = downVotes;
+        this.accepted = accepted;
         this.question = question;
         this.votes = votes;
     }
@@ -104,6 +108,14 @@ public class Response {
 
     public void setDownVotes(int downVotes) {
         this.downVotes = downVotes;
+    }
+
+    public boolean isAccepted() {
+        return accepted;
+    }
+
+    public void setAccepted(boolean accepted) {
+        this.accepted = accepted;
     }
 
     public Question getQuestion() {
