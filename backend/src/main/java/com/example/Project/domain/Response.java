@@ -11,26 +11,26 @@ import java.util.List;
 public class Response {
 
     @Id
-    @Column(name="id")
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
 
-    @Column(name="text")
+    @Column(name = "text")
     private String text;
 
-    @Column(name="created_at")
+    @Column(name = "created_at")
     @JsonProperty("created_at")
     private Timestamp createdAt;
 
-    @Column(name="created_by")
+    @Column(name = "created_by")
     @JsonProperty("created_by")
     private String createdBy;
 
-    @Column(name="up_votes")
+    @Column(name = "up_votes")
     @JsonProperty("up_votes")
     private int upVotes;
 
-    @Column(name="down_votes")
+    @Column(name = "down_votes")
     @JsonProperty("down_votes")
     private int downVotes;
 
@@ -43,7 +43,8 @@ public class Response {
     @JsonIgnore
     private List<Vote> votes;
 
-    public Response(){}
+    public Response() {
+    }
 
     public Response(int id, String text, Timestamp createdAt, String createdBy, int upVotes, int downVotes,
                     Question question, List<Vote> votes) {

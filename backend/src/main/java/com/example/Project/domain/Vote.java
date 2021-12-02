@@ -31,7 +31,8 @@ public class Vote {
     private Response response;
 
 
-    public Vote(){}
+    public Vote() {
+    }
 
     public Vote(int id, String createdBy, int voteUp, int voteDown, Response response) {
         this.id = id;

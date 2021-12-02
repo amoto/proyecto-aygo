@@ -11,32 +11,33 @@ import java.util.List;
 public class Question {
 
     @Id
-    @Column(name="id")
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
 
-    @Column(name="title")
+    @Column(name = "title")
     private String title;
 
-    @Column(name="description")
+    @Column(name = "description")
     private String description;
 
-    @Column(name="created_at")
+    @Column(name = "created_at")
     @JsonProperty("created_at")
     private Timestamp createdAt;
 
-    @Column(name="created_by")
+    @Column(name = "created_by")
     @JsonProperty("created_by")
     private String createdBy;
 
-    @Column(name="tags")
+    @Column(name = "tags")
     private String tags;
 
     @OneToMany(mappedBy = "question", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Response> responses;
 
-    public Question(){}
+    public Question() {
+    }
 
     public Question(int id, String title, String description, Timestamp createdAt, String createdBy, String tags,
                     List<Response> responses) {
