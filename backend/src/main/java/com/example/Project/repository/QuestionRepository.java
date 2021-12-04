@@ -12,7 +12,7 @@ import java.util.List;
 
 
 @Repository
-public interface QuestionRepository extends JpaRepository<Question,Long> {
+public interface QuestionRepository extends JpaRepository<Question, Long> {
 
     @Override
     Question save(Question question);
@@ -23,9 +23,9 @@ public interface QuestionRepository extends JpaRepository<Question,Long> {
 
     @Transactional
     @Modifying
-    @Query(value = "with sum_votes as(" +
-            "select sum(vote_up) as sumUp, sum(vote_down) as sumDown from questionVotes where question_id = :questionId)" +
-            "update questions set votes_up = sum_votes.sumUp, votes_down = sum_votes.sumDown from sum_votes where id = :questionId",
+    @Query(value = "WITH sum_votes AS(" +
+            "SELECT SUM(vote_up) AS sumUp, SUM(vote_down) AS sumDown FROM questionVotes WHERE question_id = :questionId)" +
+            "UPDATE questions SET votes_up = sum_votes.sumUp, votes_down = sum_votes.sumDown FROM sum_votes WHERE id = :questionId",
             nativeQuery = true)
     void updateQuestionVotes(@Param("questionId") int questionId);
 

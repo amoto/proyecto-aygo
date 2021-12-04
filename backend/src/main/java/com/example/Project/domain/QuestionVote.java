@@ -30,7 +30,8 @@ public class QuestionVote {
     @JsonIgnore
     private Question question;
 
-    public QuestionVote(){}
+    public QuestionVote() {
+    }
 
     public QuestionVote(int id, int voteUp, int voteDown, String createdBy, Question question) {
         this.id = id;

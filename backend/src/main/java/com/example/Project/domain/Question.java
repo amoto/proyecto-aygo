@@ -11,25 +11,25 @@ import java.util.List;
 public class Question {
 
     @Id
-    @Column(name="id")
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
 
-    @Column(name="title")
+    @Column(name = "title")
     private String title;
 
-    @Column(name="description")
+    @Column(name = "description")
     private String description;
 
-    @Column(name="created_at")
+    @Column(name = "created_at")
     @JsonProperty("created_at")
     private Timestamp createdAt;
 
-    @Column(name="created_by")
+    @Column(name = "created_by")
     @JsonProperty("created_by")
     private String createdBy;
 
-    @Column(name="tags")
+    @Column(name = "tags")
     private String tags;
 
     @Column(name = "votes_up")
@@ -48,7 +48,8 @@ public class Question {
     @JsonIgnore
     private List<QuestionVote> votes;
 
-    public Question(){}
+    public Question() {
+    }
 
     public Question(int id, String title, String description, Timestamp createdAt, String createdBy, String tags,
                     int votesUp, int votesDown, List<Response> responses, List<QuestionVote> votes) {

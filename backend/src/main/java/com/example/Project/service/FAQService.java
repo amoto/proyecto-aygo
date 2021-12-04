@@ -100,28 +100,28 @@ public class FAQService {
         }
     }
 
-    public void acceptResponse(int responseId, String questionCreatedBy){
+    public void acceptResponse(int responseId, String questionCreatedBy) {
         Response response = responseRepository.findResponseById(responseId);
         Response responseAccepted = responseRepository.findAcceptedResponse(response.getQuestion().getId());
-        if(response.getQuestion().getCreatedBy().equals(questionCreatedBy)){
+        if (response.getQuestion().getCreatedBy().equals(questionCreatedBy)) {
             if (responseAccepted != null) {
                 responseRepository.updateAcceptResponse(responseAccepted.getId(), false);
             }
-            responseRepository.updateAcceptResponse(responseId,true);
+            responseRepository.updateAcceptResponse(responseId, true);
         }
 
     }
 
-    public QuestionVote saveQuestionVote(QuestionVote questionVote, String voteRequest, int questionId){
+    public QuestionVote saveQuestionVote(QuestionVote questionVote, String voteRequest, int questionId) {
         QuestionVote isPresent = questionVoteRepository
-                .findQuestionVoteByQuestionIdAndCreatedBy(questionId,questionVote.getCreatedBy());
-        if(isPresent == null){
+                .findQuestionVoteByQuestionIdAndCreatedBy(questionId, questionVote.getCreatedBy());
+        if (isPresent == null) {
             Question question = questionRepository.findQuestionById(questionId);
             questionVote.setQuestion(question);
-            if(voteRequest.equals("up")){
+            if (voteRequest.equals("up")) {
                 questionVote.setVoteUp(1);
                 questionVote.setVoteDown(0);
-            }else if(voteRequest.equals("down")){
+            } else if (voteRequest.equals("down")) {
                 questionVote.setVoteUp(0);
                 questionVote.setVoteDown(1);
             }
@@ -132,12 +132,12 @@ public class FAQService {
         return isPresent;
     }
 
-    public void updateQuestionVote(String voteRequest, int questionId, String voteCreator){
-        if(voteRequest.equals("up")){
-            questionVoteRepository.updateQuestionVoteUp(questionId,voteCreator);
+    public void updateQuestionVote(String voteRequest, int questionId, String voteCreator) {
+        if (voteRequest.equals("up")) {
+            questionVoteRepository.updateQuestionVoteUp(questionId, voteCreator);
             questionRepository.updateQuestionVotes(questionId);
-        }else if(voteRequest.equals("down")){
-            questionVoteRepository.updateQuestionVoteDown(questionId,voteCreator);
+        } else if (voteRequest.equals("down")) {
+            questionVoteRepository.updateQuestionVoteDown(questionId, voteCreator);
             questionRepository.updateQuestionVotes(questionId);
         }
     }

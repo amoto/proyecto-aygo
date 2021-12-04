@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-public interface ResponseRepository extends JpaRepository<Response,Long> {
+public interface ResponseRepository extends JpaRepository<Response, Long> {
 
     @Override
     Response save(Response response);
@@ -23,9 +23,9 @@ public interface ResponseRepository extends JpaRepository<Response,Long> {
 
     @Transactional
     @Modifying
-    @Query(value = "with sum_votes as(" +
-            "select sum(vote_up) as sumUp, sum(vote_down) as sumDown from votes where response_id = :responseId)" +
-            "update responses set up_votes = sum_votes.sumUp, down_votes = sum_votes.sumDown from sum_votes where id = :responseId",
+    @Query(value = "WITH sum_votes AS(" +
+            "SELECT SUM(vote_up) AS sumUp, SUM(vote_down) AS sumDown FROM votes WHERE response_id = :responseId)" +
+            "UPDATE responses SET up_votes = sum_votes.sumUp, down_votes = sum_votes.sumDown FROM sum_votes WHERE id = :responseId",
             nativeQuery = true)
     void updateResponseVotes(@Param("responseId") int responseId);
 
