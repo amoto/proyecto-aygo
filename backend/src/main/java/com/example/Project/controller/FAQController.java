@@ -40,6 +40,7 @@ public class FAQController {
 
     @PostMapping("/question")
     public ResponseEntity<Question> saveQuestion(@RequestBody Question question) {
+        question.setCreatedBy(getUser());
         return new ResponseEntity<>(faqService.saveQuestion(question), HttpStatus.OK);
     }
 
@@ -73,6 +74,7 @@ public class FAQController {
     @PostMapping("/voteUp/question/{questionId}")
     public ResponseEntity<QuestionVote> saveVoteUpQuestion(@RequestBody QuestionVote questionVote,
                                                            @PathVariable("questionId") int questionId) {
+        questionVote.setCreatedBy(getUser());
         return new ResponseEntity<>(faqService.saveQuestionVote(questionVote, "up", questionId),
                 HttpStatus.OK);
     }
@@ -80,6 +82,7 @@ public class FAQController {
     @PostMapping("/voteDown/question/{questionId}")
     public ResponseEntity<QuestionVote> saveVoteDownQuestion(@RequestBody QuestionVote questionVote,
                                                              @PathVariable("questionId") int questionId) {
+        questionVote.setCreatedBy(getUser());
         return new ResponseEntity<>(faqService.saveQuestionVote(questionVote, "down", questionId),
                 HttpStatus.OK);
     }
