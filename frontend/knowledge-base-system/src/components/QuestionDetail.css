@@ -1,0 +1,11 @@
+.response{
+    border:black 1px solid;
+    background-color: #92a8d1;
+    width: 50%; 
+    margin: auto;
+};
+
+.crateresponse{
+    width: 50%;
+    margin: auto;
+};
