@@ -1,0 +1,693 @@
+{
+  "version": "14.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "CdkAygoFinalStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://395724659535/us-east-1",
+      "properties": {
+        "templateFile": "CdkAygoFinalStack.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/CdkAygoFinalStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.afe67465ec62603d27d77795221a45e68423c87495467b0265ecdadad80bb5e2.zip",
+              "id": "afe67465ec62603d27d77795221a45e68423c87495467b0265ecdadad80bb5e2",
+              "packaging": "file",
+              "sourceHash": "afe67465ec62603d27d77795221a45e68423c87495467b0265ecdadad80bb5e2",
+              "s3BucketParameter": "AssetParametersafe67465ec62603d27d77795221a45e68423c87495467b0265ecdadad80bb5e2S3BucketA216A7EC",
+              "s3KeyParameter": "AssetParametersafe67465ec62603d27d77795221a45e68423c87495467b0265ecdadad80bb5e2S3VersionKeyC59C30A0",
+              "artifactHashParameter": "AssetParametersafe67465ec62603d27d77795221a45e68423c87495467b0265ecdadad80bb5e2ArtifactHash3CBE2F36"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.ts:252:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:161:23)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:66:19)",
+              "CdkAygoFinalStack.addFileAsset (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:355:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:70:25)",
+              "new Asset (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:102:40)",
+              "AssetCode.bind (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:183:20)",
+              "new Function (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:341:29)",
+              "KeyPair.ensureLambda (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\cdk-ec2-key-pair\\lib\\index.ts:208:16)",
+              "new KeyPair (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\cdk-ec2-key-pair\\lib\\index.ts:96:24)",
+              "new CdkAygoFinalStack (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\lib\\cdk_aygo_final-stack.ts:24:17)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\bin\\cdk_aygo_final.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkAygoFinalStack/KeyPair/EC2-Key-Pair-cdk-keypair/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyPairEC2KeyPaircdkkeypairA709CCF7",
+            "trace": [
+              "new CustomResource (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\custom-resource.ts:36:21)",
+              "new KeyPair (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\cdk-ec2-key-pair\\lib\\index.ts:104:17)",
+              "new CdkAygoFinalStack (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\lib\\cdk_aygo_final-stack.ts:24:17)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\bin\\cdk_aygo_final.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkAygoFinalStack/EC2-Key-Pair-Manager-Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EC2KeyPairManagerPolicyEBBC1576",
+            "trace": [
+              "new ManagedPolicy (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-iam\\lib\\managed-policy.ts:117:22)",
+              "KeyPair.ensureLambda (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\cdk-ec2-key-pair\\lib\\index.ts:156:20)",
+              "new KeyPair (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\cdk-ec2-key-pair\\lib\\index.ts:96:24)",
+              "new CdkAygoFinalStack (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\lib\\cdk_aygo_final-stack.ts:24:17)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\bin\\cdk_aygo_final.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkAygoFinalStack/EC2-Key-Pair-Manager-Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EC2KeyPairManagerRoleB243C519",
+            "trace": [
+              "new Role (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:199:18)",
+              "KeyPair.ensureLambda (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\cdk-ec2-key-pair\\lib\\index.ts:196:18)",
+              "new KeyPair (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\cdk-ec2-key-pair\\lib\\index.ts:96:24)",
+              "new CdkAygoFinalStack (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\lib\\cdk_aygo_final-stack.ts:24:17)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\bin\\cdk_aygo_final.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkAygoFinalStack/EC2-Key-Name-Manager-Lambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EC2KeyNameManagerLambdaBE629145",
+            "trace": [
+              "new Function (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:391:35)",
+              "KeyPair.ensureLambda (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\cdk-ec2-key-pair\\lib\\index.ts:208:16)",
+              "new KeyPair (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\cdk-ec2-key-pair\\lib\\index.ts:96:24)",
+              "new CdkAygoFinalStack (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\lib\\cdk_aygo_final-stack.ts:24:17)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\bin\\cdk_aygo_final.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkAygoFinalStack/AssetParameters/afe67465ec62603d27d77795221a45e68423c87495467b0265ecdadad80bb5e2/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersafe67465ec62603d27d77795221a45e68423c87495467b0265ecdadad80bb5e2S3BucketA216A7EC",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:144:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:66:19)",
+              "CdkAygoFinalStack.addFileAsset (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:355:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:70:25)",
+              "new Asset (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:102:40)",
+              "AssetCode.bind (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:183:20)",
+              "new Function (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:341:29)",
+              "KeyPair.ensureLambda (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\cdk-ec2-key-pair\\lib\\index.ts:208:16)",
+              "new KeyPair (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\cdk-ec2-key-pair\\lib\\index.ts:96:24)",
+              "new CdkAygoFinalStack (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\lib\\cdk_aygo_final-stack.ts:24:17)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\bin\\cdk_aygo_final.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkAygoFinalStack/AssetParameters/afe67465ec62603d27d77795221a45e68423c87495467b0265ecdadad80bb5e2/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersafe67465ec62603d27d77795221a45e68423c87495467b0265ecdadad80bb5e2S3VersionKeyC59C30A0",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:144:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:66:19)",
+              "CdkAygoFinalStack.addFileAsset (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:355:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:70:25)",
+              "new Asset (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:102:40)",
+              "AssetCode.bind (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:183:20)",
+              "new Function (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:341:29)",
+              "KeyPair.ensureLambda (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\cdk-ec2-key-pair\\lib\\index.ts:208:16)",
+              "new KeyPair (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\cdk-ec2-key-pair\\lib\\index.ts:96:24)",
+              "new CdkAygoFinalStack (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\lib\\cdk_aygo_final-stack.ts:24:17)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\bin\\cdk_aygo_final.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkAygoFinalStack/AssetParameters/afe67465ec62603d27d77795221a45e68423c87495467b0265ecdadad80bb5e2/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersafe67465ec62603d27d77795221a45e68423c87495467b0265ecdadad80bb5e2ArtifactHash3CBE2F36",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:144:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:66:19)",
+              "CdkAygoFinalStack.addFileAsset (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:355:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:70:25)",
+              "new Asset (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:102:40)",
+              "AssetCode.bind (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:183:20)",
+              "new Function (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:341:29)",
+              "KeyPair.ensureLambda (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\cdk-ec2-key-pair\\lib\\index.ts:208:16)",
+              "new KeyPair (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\cdk-ec2-key-pair\\lib\\index.ts:96:24)",
+              "new CdkAygoFinalStack (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\lib\\cdk_aygo_final-stack.ts:24:17)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\bin\\cdk_aygo_final.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkAygoFinalStack/KeyPair_2/EC2-Key-Pair-cdk-keypair_2/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyPair2EC2KeyPaircdkkeypair2990674C7",
+            "trace": [
+              "new CustomResource (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\custom-resource.ts:36:21)",
+              "new KeyPair (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\cdk-ec2-key-pair\\lib\\index.ts:104:17)",
+              "new CdkAygoFinalStack (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\lib\\cdk_aygo_final-stack.ts:31:22)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\bin\\cdk_aygo_final.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkAygoFinalStack/KeyPair_3/EC2-Key-Pair-cdk-keypair_3/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyPair3EC2KeyPaircdkkeypair3AA7B0E5E",
+            "trace": [
+              "new CustomResource (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\custom-resource.ts:36:21)",
+              "new KeyPair (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\cdk-ec2-key-pair\\lib\\index.ts:104:17)",
+              "new CdkAygoFinalStack (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\lib\\cdk_aygo_final-stack.ts:38:22)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\bin\\cdk_aygo_final.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkAygoFinalStack/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecurityGroupDD263621",
+            "trace": [
+              "new SecurityGroup (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.ts:272:26)",
+              "new CdkAygoFinalStack (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\lib\\cdk_aygo_final-stack.ts:45:27)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\bin\\cdk_aygo_final.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkAygoFinalStack/ec2Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ec2Role38AB65C0",
+            "trace": [
+              "new Role (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:199:18)",
+              "new CdkAygoFinalStack (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\lib\\cdk_aygo_final-stack.ts:73:18)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\bin\\cdk_aygo_final.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkAygoFinalStack/Instance/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InstanceInstanceProfileAB5AEF02",
+            "trace": [
+              "new Instance (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-ec2\\lib\\instance.ts:164:24)",
+              "new CdkAygoFinalStack (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\lib\\cdk_aygo_final-stack.ts:97:25)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\bin\\cdk_aygo_final.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkAygoFinalStack/Instance/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InstanceC1063A87",
+            "trace": [
+              "new Instance (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-ec2\\lib\\instance.ts:199:21)",
+              "new CdkAygoFinalStack (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\lib\\cdk_aygo_final-stack.ts:97:25)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\bin\\cdk_aygo_final.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkAygoFinalStack/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter",
+            "trace": [
+              "Function.fromStringParameterAttributes (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-ssm\\lib\\parameter.ts:194:9)",
+              "Function.valueForTypedStringParameter (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-ssm\\lib\\parameter.ts:245:17)",
+              "lookupImage (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-ec2\\lib\\machine-image.ts:407:27)",
+              "AmazonLinuxImage.getImage (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-ec2\\lib\\machine-image.ts:210:21)",
+              "new Instance (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-ec2\\lib\\instance.ts:169:44)",
+              "new CdkAygoFinalStack (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\lib\\cdk_aygo_final-stack.ts:97:25)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\bin\\cdk_aygo_final.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkAygoFinalStack/IP Address": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IPAddress",
+            "trace": [
+              "new CdkAygoFinalStack (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\lib\\cdk_aygo_final-stack.ts:111:5)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\bin\\cdk_aygo_final.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkAygoFinalStack/Instance_2/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Instance2InstanceProfileA464540C",
+            "trace": [
+              "new Instance (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-ec2\\lib\\instance.ts:164:24)",
+              "new CdkAygoFinalStack (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\lib\\cdk_aygo_final-stack.ts:124:27)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\bin\\cdk_aygo_final.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkAygoFinalStack/Instance_2/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Instance2EAAEADBE",
+            "trace": [
+              "new Instance (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-ec2\\lib\\instance.ts:199:21)",
+              "new CdkAygoFinalStack (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\lib\\cdk_aygo_final-stack.ts:124:27)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\bin\\cdk_aygo_final.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkAygoFinalStack/IP Address back": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IPAddressback",
+            "trace": [
+              "new CdkAygoFinalStack (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\lib\\cdk_aygo_final-stack.ts:138:6)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\bin\\cdk_aygo_final.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkAygoFinalStack/Instance_3/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Instance3InstanceProfile21090B8D",
+            "trace": [
+              "new Instance (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-ec2\\lib\\instance.ts:164:24)",
+              "new CdkAygoFinalStack (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\lib\\cdk_aygo_final-stack.ts:152:27)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\bin\\cdk_aygo_final.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkAygoFinalStack/Instance_3/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Instance3F860BE3C",
+            "trace": [
+              "new Instance (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\aws-ec2\\lib\\instance.ts:199:21)",
+              "new CdkAygoFinalStack (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\lib\\cdk_aygo_final-stack.ts:152:27)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\bin\\cdk_aygo_final.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkAygoFinalStack/Download Key Command": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DownloadKeyCommand",
+            "trace": [
+              "new CdkAygoFinalStack (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\lib\\cdk_aygo_final-stack.ts:170:5)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\bin\\cdk_aygo_final.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkAygoFinalStack/ssh command": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "sshcommand",
+            "trace": [
+              "new CdkAygoFinalStack (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\lib\\cdk_aygo_final-stack.ts:176:5)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\bin\\cdk_aygo_final.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkAygoFinalStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\private\\metadata-resource.ts:22:24)",
+              "C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:166:5",
+              "visit (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:231:5)",
+              "visit (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:227:5)",
+              "injectMetadataResources (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:157:3)",
+              "Object.synthesize (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:18:3)",
+              "App.synth (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\stage.ts:94:23)",
+              "process.<anonymous> (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\@aws-cdk\\core\\lib\\app.ts:64:45)",
+              "Object.onceWrapper (node:events:510:26)",
+              "process.emit (node:events:390:28)",
+              "process.emit (node:domain:475:12)",
+              "process.emit (C:\\Users\\dtorres\\Documents\\otros\\Maestria Informatica\\Arquitectura y Gobernabilidad\\cdk_aygo_final\\node_modules\\source-map-support\\source-map-support.js:516:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "CdkAygoFinalStack"
+    }
+  }
+}

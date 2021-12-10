@@ -144,8 +144,7 @@ export class CdkAygoFinalStack extends cdk.Stack {
     'yum update -y',
     'yum install docker -y',
     'service docker start',
-    'sudo docker run -d -p 27017:27017 --name mongodbta dftorresr/taller1_vir_prog_dist'
-    //'sudo docker run -d -p 80:8080 --name back 9410ger/projectaygogroup2:9.6 -e DB_HOST=' + ec2Instance_2.instancePublicIp + ' -e DB_PORT=5432 -e DB_USER=aygo_user -e DB_PASS=aygo_password -e DB_NAME=aygo'
+    'sudo docker run -d -p 80:3000 -e REACT_APP_HOST_IP_ADDRESS=http://' + ec2Instance_2.instancePublicIp + ' --name front legyorozun/front:latest'
     )
 
 	// Create the EC2 instance 3 using the Security Group, AMI, and KeyPair 2 defined. frontend
