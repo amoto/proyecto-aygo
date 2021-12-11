@@ -322,4 +322,12 @@ Esta pantalla muestra la pregunta con las respuestas asociadas, tiene una secci�
 
 ![ScreenShot](images/DetallePregunta.png)
 
+Para el deployment se utilizó un script hecho en Typescript con aws-cdk, el cual se encarga de levantar las instancias ec2
+para cada parte del proyecto, backend, frontend y base de datos.
 
+![ScreenShot](images/cdk_deploy.png)
+
+Se instanciaron las máqinas correctamente
+
+
+![ScreenShot](images/instancias_aws.PNG)
