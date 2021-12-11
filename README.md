@@ -305,3 +305,21 @@ Request:
    {}
    ```
 
+El frontend fue desarrollado usando React utiliza la librería axios para el llamado del API, la imagen que se genera recibe una variable
+de entorno con el host  del API de esta manera puede desplegarse en diferentes ambientes sin tener que regenerar la imagen a continuación sé
+muestra capturas de las pantallas.
+
+Listado de preguntas
+
+![ScreenShot](images/ListadoPreguntas.png)
+
+Crear Pregunta
+
+![ScreenShot](images/CrearPregunta.png)
+
+Detalle de pregunta
+Esta pantalla muestra la pregunta con las respuestas asociadas, tiene una sección para agregar una respuesta a la pregunta.
+
+![ScreenShot](images/DetallePregunta.png)
+
+
