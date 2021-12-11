@@ -16,7 +16,7 @@ public interface ResponseRepository extends JpaRepository<Response, Long> {
 
     Response findResponseById(int responseId);
 
-    @Query("select r from responses r order by (r.upVotes - r.downVotes) desc ")
+    @Query("select r from responses r where r.question.id = :questionId order by (r.upVotes - r.downVotes) desc ")
     List<Response> findResponsesByQuestionId(int questionId);
 
     List<Response> findResponsesByCreatedBy(String createdBy);

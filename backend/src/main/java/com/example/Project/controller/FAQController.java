@@ -16,6 +16,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/faq")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class FAQController {
 
     private final Boolean securityEnabled;
